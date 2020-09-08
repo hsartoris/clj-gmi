@@ -2,6 +2,18 @@
 
 FIXME: description
 
+## Generating a keystore with a self-signed cert
+```bash
+keytool -genkey \
+		-keyalg RSA \
+		-keysize 2048 \ # or something else
+		-alias localhost \ # or whatever
+		-validity 365 \ # same
+		-keystore resources/keystore.jks \
+		-storepass changeit
+```
+Will create a new keystore if not existent.
+
 ## Installation
 
 Download from http://example.com/FIXME.
